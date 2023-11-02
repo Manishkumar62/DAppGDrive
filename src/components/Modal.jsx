@@ -4,7 +4,8 @@ import { accessList } from '../data/constant';
 const Modal = ({setModalOpen}) => {
     const sharing = async () => {
         const address = document.querySelector(".address").value;
-        accessList.push(address);
+        accessList.push({address:address});
+        alert("Shared with address: "+ address);
         setModalOpen(false);
     };
     useEffect(() => {
@@ -13,7 +14,7 @@ const Modal = ({setModalOpen}) => {
           const options = accessList;
     
           for (let i = 0; i < options.length; i++) {
-            let opt = options[i];
+            let opt = options[i].address;
             let e1 = document.createElement("option");
             e1.textContent = opt;
             e1.value = opt;

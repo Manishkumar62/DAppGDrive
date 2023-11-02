@@ -1,9 +1,29 @@
 export const accessList = [
-    "adderss1",
-    "address2",
-    "address3",
-    "address4"
+    { 
+        address:"address1",
+        src:'https://a.storyblok.com/f/191576/1200x800/215e59568f/round_profil_picture_after_.webp',
+        alt:'img-1',
+        key:'img-1'
+    },
+    { 
+        address:"address2",
+        src:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVA_HrQLjkHiJ2Ag5RGuwbFeDKRLfldnDasw&usqp=CAU',
+        alt:'img-2',
+        key:'img-2'
+    },
+    { 
+        address:"address3",
+        src:'https://play-lh.googleusercontent.com/C9CAt9tZr8SSi4zKCxhQc9v4I6AOTqRmnLchsu1wVDQL0gsQ3fmbCVgQmOVM1zPru8UH=w240-h480-rw',
+        alt:'img-3',
+        key:'img-3'
+    },
+    { 
+        address:"address4",
+        src:'https://marketplace.canva.com/EAFSZhFumYM/1/0/1600w/canva-dark-red-neon-futuristic-instagram-profile-picture-MUPA4np8in0.jpg',
+        alt:'img-1',
+        key:'img-1'
+    }
 ]
-// export const files = {
-
-// }
+export const AccountList = [
+    "adderss1"
+]

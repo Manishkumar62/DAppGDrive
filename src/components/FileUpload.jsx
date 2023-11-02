@@ -1,7 +1,31 @@
 import { useState } from "react";
 import "./FileUpload.css";
 
-const FileUpload = () => {
+const FileUpload = ({account}) => {
+  const [file, setFile] = useState(null);
+  const [fileName, setFileName] = useState("No image selected");
+
+  const handleSubmit = async(e) =>{
+    e.preventDefault();
+    if(file){
+      console.log(file);
+    }
+    alert("Successfully Image Uploaded");
+    setFileName("No image selected");
+    setFile(null);
+  }
+
+  const retrieveFile = (e)=>{
+    const data = e.target.files[0];
+    const reader = new window.FileReader();
+    reader.readAsArrayBuffer(data);
+    reader.onloadend = () => {
+      setFile(e.target.files[0]);
+    };
+    setFileName(e.target.files[0].name);
+    e.preventDefault();
+  }
+
   return (
     <div className="top">
       <form className="form" onSubmit={handleSubmit}>
